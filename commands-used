@@ -1,0 +1,209 @@
+# Commands Used in DevOps Flask Project
+Project Objective
+Connect to EC2 Instance
+
+Used to access the Ubuntu server from AWS browser terminal.
+
+EC2 → Instance → Connect → EC2 Instance Connect → Connect
+
+This project demonstrates how to deploy a Python Flask web application on an AWS EC2 Ubuntu server using Docker and GitHub. It represents a beginner-level DevOps workflow involving cloud deployment, containerization, and version control.
+## Update Ubuntu Packages
+
+```bash
+sudo apt update -y
+```
+
+---
+
+## Check Linux Version
+
+```bash
+uname -a
+```
+
+---
+
+## Check Python Version
+
+```bash
+python3 --version
+```
+
+---
+
+## Check pip Version
+
+```bash
+pip3 --version
+```
+
+---
+
+## Install Flask
+
+```bash
+sudo apt install python3-flask -y
+```
+
+---
+
+## Create Flask Application File
+
+```bash
+nano app.py
+```
+
+---
+
+## Run Flask Application
+
+```bash
+python3 app.py
+```
+
+---
+
+## Install Docker
+
+```bash
+sudo apt install docker.io -y
+```
+
+---
+
+## Start Docker
+
+```bash
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+---
+
+## Check Docker Version
+
+```bash
+docker --version
+```
+
+---
+
+## Create Dockerfile
+
+```bash
+nano Dockerfile
+```
+
+---
+
+## Build Docker Image
+
+```bash
+sudo docker build -t devops-flask-app .
+```
+
+---
+
+## Check Docker Images
+
+```bash
+sudo docker images
+```
+
+---
+
+## Run Docker Container
+
+```bash
+sudo docker run -d -p 5000:5000 devops-flask-app
+```
+
+---
+
+## Check Running Containers
+
+```bash
+sudo docker ps
+```
+
+---
+
+## Install Git
+
+```bash
+sudo apt install git -y
+```
+
+---
+
+## Initialize Git Repository
+
+```bash
+git init
+```
+
+---
+
+## Add Files to Git
+
+```bash
+git add .
+```
+
+---
+
+## Commit Project
+
+```bash
+git commit -m "Initial Commit"
+```
+
+---
+
+## Connect GitHub Repository
+
+```bash
+git remote add origin <repository-link>
+```
+
+---
+
+## Push Project to GitHub
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+Output of the Project
+
+When accessed through browser:
+
+Welcome to DevOps Cloud Project
+Technologies Used
+AWS EC2
+Ubuntu Linux
+Python Flask
+Docker
+Git
+GitHub
+Advantages of the Project
+Demonstrates cloud deployment skills
+Shows containerization using Docker
+Uses GitHub for version control
+Beginner-friendly DevOps implementation
+Publicly accessible web application
+Real-World Usage of This Project
+
+This type of project is used in real companies for:
+
+Deploying web applications on cloud servers
+Hosting internal business applications
+Running scalable microservices
+Containerized application deployment
+DevOps automation workflows
+Testing CI/CD pipelines
+Cloud-native application development
+Conclusion
+
+The project successfully demonstrates deployment of a Flask web application on AWS EC2 using Docker and GitHub. It provides practical understanding of cloud computing, Linux administration, containerization, and DevOps fundamentals.
